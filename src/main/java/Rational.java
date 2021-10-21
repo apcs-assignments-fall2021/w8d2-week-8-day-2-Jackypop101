@@ -26,32 +26,65 @@ public class Rational {
     // (When you write the simplify method later on, you should
     // also call it in this method to return the simplified result)
     public static Rational add(Rational r, Rational s) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int rn = r.numerator;
+        int rd = r.denominator;
+        int sn = s.numerator;
+        int sd = s.denominator;
+
+        int new_numerator = rn*sd + sn* rd;
+        int new_denominator = rd * sd;
+
+        Rational x = new Rational(new_numerator,new_denominator);
+        return x;
     }
 
     // This method takes two Rationals, subtracts thems up, 
     // and returns a Rational equal to the difference
     public static Rational subtract(Rational r, Rational s) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int rn = r.numerator;
+        int rd = r.denominator;
+        int sn = s.numerator;
+        int sd = s.denominator;
+
+        int new_numerator = rn*sd - sn* rd;
+        int new_denominator = rd * sd;
+
+        Rational x = new Rational(new_numerator,new_denominator);
+        return x;
+
     }
     
     public static Rational multiply(Rational r, Rational s) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int rn = r.numerator;
+        int rd = r.denominator;
+        int sn = s.numerator;
+        int sd = s.denominator;
+
+        int new_numerator = rn * sn;
+        int new_denominator = rd * sd;
+
+        Rational x = new Rational(new_numerator,new_denominator);
+        return x;
     }
     
     public static Rational divide(Rational r, Rational s) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int rn = r.numerator;
+        int rd = r.denominator;
+        int sn = s.numerator;
+        int sd = s.denominator;
+
+        int new_numerator = rn*sd;
+        int new_denominator = rd * sn;
+
+        Rational x = new Rational(new_numerator,new_denominator);
+        return x;
     }
 
     // Finds the greatest common factor between a and b
     // To find the greatest common factor, find the largest number x
     // such that a and b are both multiples of x
     public static int greatestCommonFactor(int a, int b){
-        // REPLACE WITH YOUR CODE HERE
+        while
         return 1;
     }
 
