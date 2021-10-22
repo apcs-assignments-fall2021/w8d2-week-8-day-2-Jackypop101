@@ -35,7 +35,7 @@ public class Rational {
         int new_denominator = rd * sd;
 
         Rational x = new Rational(new_numerator,new_denominator);
-        return x;
+        return Rational.simplify(x);
     }
 
     // This method takes two Rationals, subtracts thems up, 
@@ -50,7 +50,7 @@ public class Rational {
         int new_denominator = rd * sd;
 
         Rational x = new Rational(new_numerator,new_denominator);
-        return x;
+        return Rational.simplify(x);
 
     }
     
@@ -64,7 +64,7 @@ public class Rational {
         int new_denominator = rd * sd;
 
         Rational x = new Rational(new_numerator,new_denominator);
-        return x;
+        return Rational.simplify(x);
     }
     
     public static Rational divide(Rational r, Rational s) {
@@ -77,14 +77,18 @@ public class Rational {
         int new_denominator = rd * sn;
 
         Rational x = new Rational(new_numerator,new_denominator);
-        return x;
+        return Rational.simplify(x);
     }
 
     // Finds the greatest common factor between a and b
     // To find the greatest common factor, find the largest number x
     // such that a and b are both multiples of x
     public static int greatestCommonFactor(int a, int b){
-        while
+        for (int i = a; i > 0; i--){
+            if (b % i == 0){
+                return i;
+            }
+        }
         return 1;
     }
 
@@ -94,8 +98,9 @@ public class Rational {
     // e.g. simplify(2/4) => 1/2
     //      simplify(1/2) => 1/2
     public static Rational simplify(Rational r) {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int y = greatestCommonFactor(r.numerator, r.denominator);
+        Rational x = new Rational(r.numerator/y,r.denominator/y);
+        return x;
     }
 
     // This following method is NOT static, we'll talk about it next class!

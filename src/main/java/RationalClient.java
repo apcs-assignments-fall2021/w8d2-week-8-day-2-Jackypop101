@@ -26,10 +26,10 @@ public class RationalClient {
         System.out.println(c); // 3/2
 
 
-//        // A more advanced test for adding Rational that won't work
-//        // until the greatestCommonFactor and simplify methods work
-//        Rational x = new Rational(1, 6);
-//        Rational y = Rational.add(t, x);
-//        System.out.println(y); // 1/1
+       // A more advanced test for adding Rational that won't work
+        // until the greatestCommonFactor and simplify methods work
+        Rational x = new Rational(1, 6);
+        Rational y = Rational.add(t, x);
+        System.out.println(Rational.simplify(y)); // 1/1
     }
 }
