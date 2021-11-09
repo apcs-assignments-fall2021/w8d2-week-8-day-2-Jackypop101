@@ -31,7 +31,7 @@ public class Rational {
         int sn = s.numerator;
         int sd = s.denominator;
 
-        int new_numerator = rn*sd + sn* rd;
+        int new_numerator = rn*sd + sn*rd;
         int new_denominator = rd * sd;
 
         Rational x = new Rational(new_numerator,new_denominator);
@@ -85,7 +85,7 @@ public class Rational {
     // such that a and b are both multiples of x
     public static int greatestCommonFactor(int a, int b){
         for (int i = a; i > 0; i--){
-            if (b % i == 0){
+            if ((b % i == 0) && (a % i == 0)){
                 return i;
             }
         }
